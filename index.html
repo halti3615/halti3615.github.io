@@ -1,12 +1,312 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <header><a href="home.html">Continue to site.</a></header>
-    <main></main>
-    <footer></footer>
-  </body>
+<html>
+    <style>
+        .body {
+            padding: 0;
+            text-align: center;
+            background: #23272a;
+            color: white;
+            font-size: 30px;
+            font-family: Arial
+            
+        }
+        .header {
+            padding: 30px;
+            text-align: center;
+            background: #23272a;
+            color: white;
+            font-size: 30px; 
+        }
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        .rexlogo {
+            float:left;
+            max-width: 100px;
+            margin: 5px;
+            padding: 0px
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover {
+            background-color: #111;
+        }
+        .rexlogo a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .rexlogo a:hover {
+            background-color: #111;
+        }
+       * {box-sizing:border-box}
+
+
+        .slideshow-container {
+            max-width: 80vw;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+        .ccstatement {
+            padding: 0;
+            text-align: center;
+            background: #2c2f33;
+            color: white;
+            font-size: 20px;
+            font-family: Arial
+        }
+        .xyz {
+            padding: 0;
+            text-align: center;
+            background: #2c2f33;
+            color: white;
+            font-size: 20px;
+            font-family: Arial
+        }
+        a:link {
+            color: white;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: white;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: gainsboro;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: gainsboro;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        .prev {
+           cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none; 
+        }  
+        
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+    </style>
+    
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 6000); // Change image every 2 seconds
+        }
+        function newPopup(url) {
+    
+    //popupWindow = window.open('popup.html','popUpWindow','height=300,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes');
+}
+
+
+    </script>
+
+    <head>
+        <title> Rex Animation Studios </title>
+        <link rel="icon" href="https://media.discordapp.net/attachments/835115484596142097/929020194733559918/thumb.png">
+    </head>
+    <body class="body" onload="showSlides(); newPopup();">
+        <ul class="menu">
+            <li class="rexlogo"><img src="https://media.discordapp.net/attachments/835115484596142097/929024343458066432/nameofwebsite.png?width=1114&height=702" style="width:100%;height:100%"></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="animations.html">Animations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 6</div>
+                <img src="https://media.discordapp.net/attachments/835115484596142097/933395848233091153/studiostock.png?width=768&height=432" style="width:100%">
+                <div class="text"></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 6</div>
+                <img src="https://media.discordapp.net/attachments/835115484596142097/933440081753165844/title.png?width=1214&height=683" style="width:100%">
+                <div class="text"></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 6</div>
+                <img src="https://media.discordapp.net/attachments/835115484596142097/932634427215970404/32sampletest.png?width=1214&height=683" style="width:100%">
+                <div class="text"></div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 6</div>
+                <img src="https://media.discordapp.net/attachments/835115484596142097/933418032322211840/screenshotgrapheditorwithoutconfidential.png?width=1214&height=683" style="width:100%">
+                <div class="text"></div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 6</div>
+                <img src="https://media.discordapp.net/attachments/835115484596142097/933395462566850600/macstock.png?width=768&height=432" style="width:100%">
+                <div class="text"></div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 6</div>
+                <img src="https://media.discordapp.net/attachments/835115484596142097/933395848233091153/studiostock.png?width=768&height=432" style="width:100%">
+                <div class="text"></div>
+            </div>
+
+
+        </div>
+        <br>
+
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+        <br><br><br><br>
+        <h1>We are Rex Animation Studios. We stand for <br>Respect. <br> Tolerance. <br>Love.</h1>
+        <img src="https://media.discordapp.net/attachments/835115484596142097/929024343458066432/nameofwebsite.png?width=1114&height=702">
+        <br><br><br>
+        <h1>The Toothless Trex is a Next Generation Kid's Animation</h1>
+        <a href="animations.html"><h2>Learn More.</h2></a>
+        <img src="https://media.discordapp.net/attachments/927246228964659220/933782097372536902/schoolpreview.png?width=1214&height=683">
+        <div class="ccstatement">
+        <br>
+            <a href="home.html">- Home</a> <br>
+            <a href="animations.html">- Animations</a> <br>
+            <a href="about.html">- About</a> <br>
+            <a href="contact.html">- Contact</a> <br>
+            <a href="disclaimer.html">- Policy</a> <br><br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+        <br> <br>
+        <p class="ccstatement">Rex Animation Studios</p>
+    </div>
+    </body>
+    
 </html>

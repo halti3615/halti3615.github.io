@@ -58,23 +58,54 @@
        * {box-sizing:border-box}
 
 
+        .slideshow-container {
+            max-width: 80vw;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+        .ccstatement {
+            padding: 0;
+            text-align: center;
+            background: #2c2f33;
+            color: white;
+            font-size: 20px;
+            font-family: Arial
+        }
+        .xyz {
+            padding: 0;
+            text-align: center;
+            background: #2c2f33;
+            color: white;
+            font-size: 20px;
+            font-family: Arial
+        }
+        a:visited {
+            color: white;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:link {
+            color: white;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: gainsboro;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: gainsboro;
+            background-color: transparent;
+            text-decoration: underline;
+        }
        
-        .fade {
-            -webkit-animation-name: fade;
-            -webkit-animation-duration: 1.5s;
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        @-webkit-keyframes fade {
-            from {opacity: .4}
-            to {opacity: 1}
-        }
-
-        @keyframes fade {
-            from {opacity: .4}
-            to {opacity: 1}
-        }
         .fade-in-image {
             animation: fadeIn 5s;
             -webkit-animation: fadeIn 5s;
@@ -101,50 +132,20 @@
             0% {opacity:0;}
             100% {opacity:1;}
         }
-
+        
         @-ms-keyframes fadeIn {
             0% {opacity:0;}
             100% {opacity:1;}
         }
-        .ccstatement {
-            padding: 0;
-            text-align: center;
-            background: #2c2f33;
-            color: white;
-            font-size: 20px;
-            font-family: Arial
-        }
-        a:link {
-            color: white;
-            background-color: transparent;
-            text-decoration: none;
-        }
-
-        a:visited {
-            color: white;
-            background-color: transparent;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: gainsboro;
-            background-color: transparent;
-            text-decoration: underline;
-        }
-
-        a:active {
-            color: gainsboro;
-            background-color: transparent;
-            text-decoration: underline;
-        }
     </style>
+
     
     <head>
         <title> Rex Animation Studios </title>
         <link rel="icon" href="https://media.discordapp.net/attachments/835115484596142097/929020194733559918/thumb.png">
     </head>
 
-    <body class="body">
+    <body class="body" onload="newPopup();">
     <ul class="menu">
             <li class="rexlogo"><img src="https://media.discordapp.net/attachments/835115484596142097/929024343458066432/nameofwebsite.png?width=1114&height=702" style="width:100%;height:100%"></li>
             <li><a href="index.html">Home</a></li>
@@ -152,12 +153,16 @@
             <li><a href="contact.html">Contact</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
-    <h1>Who Are We?</h1> <br>
-    <h2 class="fade-in-image">We are Rex Animation Studios. <br> It is our passion to bring the colourful imagination of kids to life, through our family beloved stories. We work day and night to bring you the highest quality possible, so that our little friends can enjoy a life broader of inspiration for their future selves. Our animations prepare kids for honesty, respect, tolerance and most importantly love, which are qualities that turns one into a more valuable person. </h2>
-    <img src="https://media.discordapp.net/attachments/835115484596142097/929024343458066432/nameofwebsite.png?width=1114&height=702">
+    <h1>Oops.</h1> <br>
+    <h2 >You are trying to access a site that does not exist.</h2>
+    <h3>Did you type in the link correctly?</h3> <br>
+    <img style="border-radius:30px;width:10%;height:10%" src="https://media.discordapp.net/attachments/835115484596142097/934192491727560774/unknown.png?width=431&height=431">
+    <h3><a href="index.html">Return to Home</a></h3>
         <br>
-    <h3><a href="home.html">Back to Home</a></h3>
-            <div class="ccstatement">
+        <br>
+        <br>
+        <br>
+        <footer class="ccstatement">
         <br>
         
             <a href="index.html">- Home</a> <br>
@@ -168,5 +173,5 @@
         <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
         <br> <br>
         <p class="ccstatement">Rex Animation Studios</p>
-    </div>
+    </footer>
     </body>
